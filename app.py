@@ -1,15 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def pagina_inicial():
-    return '''
-        <h1>Sistema de gestão</h1>
-        <p>Bem-vindo ao sistema.</p>
-        <a href="/sobre">Sobre</a>
-        <a href="/contato">Contato</a>
-    '''
+    return render_template('index.html')
 
 @app.route('/sobre')
 def sobre():
