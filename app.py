@@ -23,5 +23,9 @@ def contato():
         <a href="/">Voltar ao início</a>
     '''
 
+@app.route('/aluno/<nome>')
+def aluno(nome):
+    return f'<h1>Aluno</h1><p>{nome}</p><p>FATEC Jahu - Gestão da Tecnologia da Informação</p><a href="/">Voltar ao início</a>'
+
 if __name__ == '__main__':
     app.run(debug=True)
