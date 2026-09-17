@@ -1,5 +1,75 @@
-<h1>Sistema de gestão</h1>
-<p>Bem-vindo ao sistema.</p>
-<a href="/aluno/Lucas">Aluno</a>
-<a href="/sobre">Sobre</a>
-<a href="/contato">Contato</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gestão</title>
+
+  <!-- 1º: Bootstrap (base de estilos) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+  <!-- 2º: CSS próprio — carregado DEPOIS do Bootstrap para poder sobrescrever -->
+  <!-- url_for('static', filename=...) gera o caminho correto automaticamente -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">🖥️ SistemaGestão</a>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+
+    <!-- Usando a classe personalizada definida no estilo.css -->
+    <div class="boas-vindas">
+      <h1>Bem-vindo ao Sistema</h1>
+      <p class="mb-0 opacity-75">
+        Desenvolvido na disciplina Programação para Internet — FATEC Jahu
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="fs-1 mb-2">📦</div>
+            <h5>Produtos</h5>
+            <p class="text-muted small">Gerencie o catálogo</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="fs-1 mb-2">👥</div>
+            <h5>Clientes</h5>
+            <p class="text-muted small">Gerencie os clientes</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <div class="fs-1 mb-2">📊</div>
+            <h5>Relatórios</h5>
+            <p class="text-muted small">Visualize os dados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 SistemaGestão — FATEC Jahu
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+</body>
+</html>
