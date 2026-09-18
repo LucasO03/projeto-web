@@ -22,10 +22,20 @@ def aluno(nome):
 def formulario():
 
     if request.method == 'POST':
-        nome = request.form['nome']
-        nro1 = float(request.form['nro1'])
-        nro2 = float(request.form['nro2'])
+        nome = request.form.get('nome', 'Sem nome')
 
+        x = request.form.get('nro1', '1')
+        if x != '':
+            nro1 = float(x)
+        else:
+            nro1 = 1
+
+        x = request.form.get('nro2', '1')
+        if x != '':
+            nro2 = float(x)
+        else:
+            nro2 = 1
+            
         soma = nro1 + nro2
         sub = nro1 - nro2
         mult = nro1 * nro2
